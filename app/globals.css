@@ -24,3 +24,32 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.roboto-basic {
+   font-family: "Roboto", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 100;
+   font-style: normal;
+   font-variation-settings: "wdth" 100;
+}
+
+.honk-logo {
+         font-family: "Honk", system-ui;
+         font-optical-sizing: auto;
+         font-weight: 400;
+         font-style: normal;
+         font-variation-settings:
+                 "MORF" 15,
+                 "SHLN" 50;
+       }
+.bungee-spice-regular {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bagel-fat-one-regular {
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

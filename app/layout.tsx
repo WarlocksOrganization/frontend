@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import FlexLayout from "@/UI/layout/FlexLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +25,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+    <head>
+      <title>SMASH UP!</title>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bungee+Spice&family=Honk&display=swap');
+      </style>
+    </head>
+    <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <FlexLayout>
+            {children}
+        </FlexLayout>
       </body>
     </html>
   );
