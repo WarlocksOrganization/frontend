@@ -3,7 +3,7 @@ import HeaderNavButton from "@/UI/buttons/nav/HeaderNavButton";
 const MainHeader = () => {
 
     return (
-        <MainHeaderContainer className={"flex flex-col"}>
+        <MainHeaderContainer className={"flex flex-col "}>
             <FlexContainer>
                 <LogoTitle>
                     <LogoContainer>
@@ -11,10 +11,10 @@ const MainHeader = () => {
                     </LogoContainer>
                 </LogoTitle>
                 <NavBar>
-                    <HeaderNavButton>
+                    <HeaderNavButton toId={"#intro"}>
                         소개
                     </HeaderNavButton>
-                    <HeaderNavButton>
+                    <HeaderNavButton toId={"#download"}>
                         다운로드
                     </HeaderNavButton>
                 </NavBar>
@@ -38,7 +38,8 @@ const LogoContainer = styled.div`
     font-family: "Honk"
 `
 const MainHeaderContainer = styled.div`
-    width: 100vw;
+    //width: calc(100vw - (100vw - 100%));
+    width: 100%;
     height: 60vh;
     background-image: url("/header_image.png");
     background-repeat: no-repeat;
@@ -46,7 +47,6 @@ const MainHeaderContainer = styled.div`
 `
 const FlexContainer = styled.div`
     display: flex;
-    border: 3px solid black;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;

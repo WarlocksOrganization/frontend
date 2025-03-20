@@ -7,7 +7,7 @@ interface ContentTitleProps {
 const ContentTitle = ({children} : ContentTitleProps) => {
 
     return (
-        <ContentTitleContainer>
+        <ContentTitleContainer className={"mb-3"}>
             {children}
         </ContentTitleContainer>
     )

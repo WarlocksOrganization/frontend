@@ -2,19 +2,18 @@ import styled from "styled-components";
 
 interface LandingContentProps {
     children: React.ReactNode
+    titleId: string
 }
-const LandingContent = ({children} : LandingContentProps) => {
-
+const LandingContent = ({children, titleId} : LandingContentProps) => {
 
     return (
-        <LandingContentContainer>
+        <LandingContentContainer id={titleId} className={"text-center"}>
             {children}
         </LandingContentContainer>
     )
 }
 
 const LandingContentContainer = styled.div`
-    margin: 40% 0;
+    margin: 10% 0;
 `
-
 export default LandingContent;
