@@ -20,7 +20,7 @@ const Introduce = () => {
     return (
         <LandingContent titleId={"intro"}>
             <ContentTitle> 소개 </ContentTitle>
-            <div style={{ width: "100%", maxWidth: "600px", margin: "0 auto", overflow: "hidden" }}>
+            <div style={{ width: "100%", maxWidth: "960px", margin: "0 auto", overflow: "hidden" }}>
                 <Slider {...settings}>
                     <div className="slide">
                         <h3>🏹 마법 전투! 🔥</h3>

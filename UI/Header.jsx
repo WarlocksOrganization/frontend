@@ -7,15 +7,16 @@ const MainHeader = () => {
             <FlexContainer>
                 <LogoTitle>
                     <LogoContainer>
-                        SMASH UP!
+                        {/* SMASH UP! */}
+                        <img src="images/smashUp_logo1.png" width="300"/>
                     </LogoContainer>
                 </LogoTitle>
                 <NavBar>
                     <HeaderNavButton toId={"#intro"}>
-                        소개
+                        <b>소개</b>
                     </HeaderNavButton>
                     <HeaderNavButton toId={"#download"}>
-                        다운로드
+                        <b>다운로드</b>
                     </HeaderNavButton>
                 </NavBar>
             </FlexContainer>
