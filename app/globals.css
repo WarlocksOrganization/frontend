@@ -53,3 +53,12 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+    font-family: "mapleBold";
+    src: url("../font/Maplestory Bold.ttf");
+}
+@font-face {
+    font-family: "mapleLight";
+    src: url("../font/Maplestory Light.ttf");
+}

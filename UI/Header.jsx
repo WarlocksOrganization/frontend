@@ -27,7 +27,6 @@ const NavBar = styled.div`
     color: #ededed;
     font-size: 2em;
     
-    font-family: "Bagel Fat One",serif;
     width: 30%;
     display: flex;
     justify-content: space-between;
@@ -35,7 +34,6 @@ const NavBar = styled.div`
 const LogoTitle = styled.div``
 const LogoContainer = styled.div`
     font-size: 5em;
-    font-family: "Honk"
 `
 const MainHeaderContainer = styled.div`
     //width: calc(100vw - (100vw - 100%));
