@@ -1,9 +1,11 @@
-import LandingPage from "@/pages/LandingPage";
+import LandingPageV2 from "@/pages/LandingPageV2.";
 
 export default function Home() {
   return (
-    <div>
-      <LandingPage/>
-    </div>
+      <div className={"w-full"}>
+          <title>Smash up!</title>
+
+          <LandingPageV2/>
+      </div>
   );
 }
