@@ -1,12 +1,28 @@
 import styled, {keyframes} from "styled-components";
 
 const FlowSection = () => {
-
+    const logoUrls = [
+        "/logo/cpp.png",
+        "/logo/elasticsearch.png",
+        "/logo/figma.png",
+        "/logo/java.png",
+        "/logo/kibana.png",
+        "/logo/kotlin.jpg",
+        "/logo/logstash.webp",
+        "/logo/mirror.webp",
+        "/logo/mongo.png",
+        "/logo/PostgreSQL.png",
+        "/logo/spring.png",
+        "/logo/unity.png",
+    ]
 
     return (
         <FlowBox>
             <FlowWrap>
                 <Flow>
+                    {logoUrls.map((item, key) =>
+                        <img src={item} alt={item} key={key}/>
+                    )}
                     <span> 구본관 </span>
                     <span> 김성일 </span>
                     <span> 김승우 </span>
@@ -21,17 +37,17 @@ const FlowSection = () => {
 
 const flow = keyframes`
     0% {
-        transform: translate3d(110%, 0, 0);
+        transform: translate3d(70%, 0, 0);
     }
     
     100% {
-        transform: translate3d(-110%, 0, 0);
+        transform: translate3d(-210%, 0, 0);
     }
 `
 
 const FlowBox = styled.div`
     width: 100%;
-    height: 200px;
+    height: 100px;
     overflow: hidden;
 `
 
@@ -46,13 +62,19 @@ const FlowWrap = styled.div`
 `
 
 const Flow = styled.div`
-    font-size: clamp(15px, 5vw, 8rem);
-    animation: ${flow} 8s linear infinite;
+    font-size: clamp(15px, 3vw, 8rem);
+    animation: ${flow} 100s linear infinite;
     
     span {
         display: inline-block;
         font-weight: 600;
-        padding:0 20px;
+        padding: 0 3vw;
+    }
+    
+    img {
+        padding: 0 3vw;
+        display: inline-block;
+        height: 6vh;
     }
 `
 
