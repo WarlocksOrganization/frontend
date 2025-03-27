@@ -76,7 +76,7 @@ const GameIntroSection = () => {
 
     return (
         <>
-            <SliderContainer>
+            <SliderContainer id={"intro"}>
                 <Slider {...settings}>
                     {
                         sliderDatas.map(
