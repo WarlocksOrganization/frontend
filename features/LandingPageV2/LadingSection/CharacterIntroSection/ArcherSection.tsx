@@ -19,7 +19,7 @@ const ArcherSection = () => {
     ]
 
     return (
-        <ArcherSectionContainer>
+        <ArcherSectionContainer id={"charictor"}>
             <ContentSection>
                 <div className={"flex flex-row justify-between"}>
                     <div>
