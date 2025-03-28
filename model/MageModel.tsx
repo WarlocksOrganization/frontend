@@ -20,6 +20,3 @@ export function MageModel() {
         rotation={[Math.PI / 20, 0.3, 0]}
     />;
 }
-
-// 필요 시 preload
-useGLTF.preload('/models/MainMenu/MainMenu.gltf');

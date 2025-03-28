@@ -1,3 +1,4 @@
+'use client'
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,24 +8,26 @@ const TopNavBar = () => {
     return (
         <div className={"flex justify-between m-6"}>
             <LeftNavContainer >
-                <Image src={"/images/smashUp_logo1.png"} alt={"logo"} width={100} height={50}></Image>
+                <Link href={"/"}>
+                    <Image src={"/images/smashUp_logo1.png"} alt={"logo"} width={100} height={50}></Image>
+                </Link>
                 <NavButton>
-                    <Link href={"#intro"}>소개</Link>
+                    <Link href={"/#intro"}>소개</Link>
                 </NavButton>
                 <NavButton>
-                    <Link href={"#charictor"}>캐릭터 설명</Link>
+                    <Link href={"/#charictor"}>캐릭터 설명</Link>
                 </NavButton>
                 <NavButton>
-                    <Link href={"https://drive.google.com/file/d/1KjTMgWJkwlub28L_Y1JAvOyHsyfs4h4C/view?usp=sharing"}>다운로드</Link>
+                    <Link target={"_blank"} href={"https://drive.google.com/file/d/1KjTMgWJkwlub28L_Y1JAvOyHsyfs4h4C/view?usp=sharing"}>다운로드</Link>
                  </NavButton>
             </LeftNavContainer>
 
             <RightNavContainer>
                 <NavButton>
-                    <Link href={"#download"}>문의하기</Link>
+                    <Link href={"/inquire"}>문의하기</Link>
                  </NavButton>
                 <NavButton>
-                    <Link href={"#download"}>패치내역</Link>
+                    <Link href={"/fetch"}>패치내역</Link>
                 </NavButton>
             </RightNavContainer>
         </div>
