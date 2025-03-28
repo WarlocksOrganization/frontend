@@ -1,16 +1,21 @@
 'use client'
-import {ExtendedRecordMap} from "notion-types";
 import {NotionRenderer} from "react-notion-x";
 import {Modal} from "react-notion-x/build/third-party/modal";
 import styled from "styled-components";
+import {useNotionStore} from "@/stores/notionStore";
+import {useEffect, useState} from "react";
+const FetchNoteNotion = () => {
+    const [mounted, setMounted] = useState(false)
+    const { notionData, isLoading, fetchNotionData } = useNotionStore()
 
-interface FetchNoteNotionProps {
-    notionData: ExtendedRecordMap
-}
-
-const FetchNoteNotion = ({notionData} : FetchNoteNotionProps) => {
-
-
+    useEffect(() => {
+        if (!notionData) {
+            fetchNotionData()
+        }
+        setMounted(true)
+    }, [])
+    if (!mounted) return null
+    if(notionData)
     return (
         <Container>
             <NotionRenderer

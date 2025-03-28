@@ -18,7 +18,7 @@ const TopNavBar = () => {
                     <Link href={"/#charictor"}>캐릭터 설명</Link>
                 </NavButton>
                 <NavButton>
-                    <Link target={"_blank"} href={"https://drive.google.com/file/d/1KjTMgWJkwlub28L_Y1JAvOyHsyfs4h4C/view?usp=sharing"}>다운로드</Link>
+                    <Link href={"https://drive.google.com/file/d/1KjTMgWJkwlub28L_Y1JAvOyHsyfs4h4C/view?usp=sharing"} target={"_blank"}>다운로드</Link>
                  </NavButton>
             </LeftNavContainer>
 
