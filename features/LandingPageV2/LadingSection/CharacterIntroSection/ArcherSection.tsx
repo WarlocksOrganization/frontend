@@ -13,9 +13,9 @@ const ArcherSection = () => {
     ]
 
     const skillIcons = [
-        "/skill/archer/arrow_icon.png",
-        "/skill/archer/explosionArrow_icon.png",
-        "/skill/archer/poisonArrow_icon.png"
+        "/skill/v2/archer/arrow_icon.png",
+        "/skill/v2/archer/explosionArrow_icon.png",
+        "/skill/v2/archer/poisonArrow_icon.png"
     ]
 
     return (
@@ -42,15 +42,15 @@ const ArcherSection = () => {
 
                     <SkillBox className={"text-center"}>
                         <div onClick={() => {setCurrentSkill(0)}}>
-                            <img src="/skill/archer/arrow_icon.png" alt="arrow_icon"/>
+                            <img src={skillIcons[0]} alt="arrow_icon"/>
                             <span>신궁의 화살</span>
                         </div>
                         <div onClick={() => {setCurrentSkill(1)}}>
-                            <img src="/skill/archer/explosionArrow_icon.png" alt="explosionArrow_icon"/>
+                            <img src={skillIcons[1]} alt="explosionArrow_icon"/>
                             <span>폭렬 화살</span>
                         </div>
                         <div onClick={() => {setCurrentSkill(2)}}>
-                            <img src="/skill/archer/poisonArrow_icon.png" alt="arrow_icon.png"/>
+                            <img src={skillIcons[2]} alt="arrow_icon.png"/>
                             <span>맹독 화살</span>
                         </div>
                     </SkillBox>

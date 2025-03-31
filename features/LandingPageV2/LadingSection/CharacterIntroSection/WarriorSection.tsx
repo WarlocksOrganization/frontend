@@ -19,9 +19,9 @@ const WarriorSection = () => {
         "광폭 돌진",
     ]
     const skillIcons = [
-        "/skill/warrior/slash_icon.png",
-        "/skill/warrior/powerBody_icon.png",
-        "/skill/warrior/charge_icon.png"
+        "/skill/v2/warrior/slash_icon.png",
+        "/skill/v2/warrior/powerBody_icon.png",
+        "/skill/v2/warrior/charge_icon.png"
     ]
     return(
         <SectionContainer >

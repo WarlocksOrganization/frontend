@@ -18,9 +18,9 @@ const MagicianSection = () => {
         "빙설의 포효",
     ]
     const skillIcons = [
-        "/skill/mage/fireball_icon.png",
-        "/skill/mage/thunder_icon.png",
-        "/skill/mage/IceArea_icon.png"
+        "/skill/v2/mage/fireball_icon.png",
+        "/skill/v2/mage/thunder_icon.png",
+        "/skill/v2/mage/IceArea_icon.png"
     ]
 
 

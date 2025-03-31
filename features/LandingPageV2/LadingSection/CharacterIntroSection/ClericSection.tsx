@@ -14,9 +14,9 @@ const ClericSection = () => {
     ]
 
     const skillIcons = [
-        "/skill/cleric/HollyAttack_icon.png",
-        "/skill/cleric/HollyShild_icon.png",
-        "/skill/cleric/HolyRecovery_icon.png"
+        "/skill/v2/cleric/HollyAttack_icon.png",
+        "/skill/v2/cleric/HollyShild_icon.png",
+        "/skill/v2/cleric/HolyRecovery_icon.png"
     ]
 
     return (

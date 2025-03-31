@@ -7,13 +7,13 @@ import WarriorSection from "@/features/LandingPageV2/LadingSection/CharacterIntr
 const CharacterIntroSection = () => {
 
     return (
-        <>
+        <div className={"text-black"}>
             <ArcherSection />
             <WarriorSection />
             <MagicianSection />
             <ClericSection />
             <NecroSection />
-        </>
+        </div>
     )
 }
 

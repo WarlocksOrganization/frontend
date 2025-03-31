@@ -18,9 +18,9 @@ const NecroSection = () => {
         "지옥불 투척",
     ]
     const skillIcons = [
-        "/skill/necro/PhantomAttack_icon.png",
-        "/skill/necro/SoulVortex_icon.png",
-        "/skill/necro/InfernalFlask_icon.png"
+        "/skill/v2/necro/PhantomAttack_icon.png",
+        "/skill/v2/necro/SoulVortex_icon.png",
+        "/skill/v2/necro/InfernalFlask_icon.png"
     ]
 
     return (

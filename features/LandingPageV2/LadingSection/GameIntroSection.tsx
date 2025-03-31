@@ -38,38 +38,38 @@ const GameIntroSection = () => {
 
     const sliderDatas = [
         {
-            buttonName:"비주얼",
+            buttonName:"가벼운 플레이",
             buttonColor:"#FFD200",
             title: "⚔️ 귀여운 비주얼 + 깊이 있는 전략",
-            url: "/images/ingame_main.png",
+            url: "/images/1_main_image.png",
             description: "누구나 쉽게 즐길 수 있는 직관적인 전투! 지금 바로 도전하세요!"
         },
         {
-            buttonName: "전투",
+            buttonName: "스킬강화",
             buttonColor: "#FFBDA3",
             title: "🏹 마법 전투! 🔥",
-            url: "/images/ingame_fight1.png",
+            url: "/images/2_card_image.png",
             description: "최후의 생존자가 되기 위한 치열한 전투!"
         },
         {
-            buttonName: "대난투",
+            buttonName: "아이템",
             buttonColor: "#FFB4B9",
             title: "💥 6명의 플레이어 전투!",
-            url: "/images/ingame_map.png",
+            url: "/images/3_item_image.png",
             description: "아기자기한 전장에서 펼쳐지는 전략적 대결!"
         },
         {
-            buttonName: "카드 강화",
+            buttonName: "전투",
             buttonColor: "#BEF5BE",
             title: "🎴 매 라운드 카드 선택",
-            url: "/images/ingame_upgrade.png",
+            url: "/images/4_battle_image.png",
             description: "다양한 카드를 선택해 강화하세요!"
         },
         {
-            buttonName: "직업",
+            buttonName: "다양한 맵",
             title: "🏰 다양한 직업 & PVP",
             buttonColor: "#EBAA5F",
-            url: "/images/ingame_select.png",
+            url: "/images/5_map_image.png",
             description: "마법사, 전사, 네크로맨서, 궁수 등 전략을 맞춰 전투하세요!"
         }
     ]
@@ -82,8 +82,9 @@ const GameIntroSection = () => {
                         sliderDatas.map(
                             item => {
                                 return (
-                                    <div className="slide">
+                                    <div className="slide flex place-items-center">
                                         <img src={item.url} alt={item.description}/>
+                                        <span className={"absolute right-1/2 to-50%"}>asldkjf</span>
                                     </div>
                                 )
                             }
@@ -105,7 +106,7 @@ const GameIntroSection = () => {
                         )
                     }
                 </ButtonContainer>
-                <Description $fade={descriptionFade}> {description}</Description>
+                {/*<Description $fade={descriptionFade}> {description}</Description>*/}
             </SliderContainer>
 
 
