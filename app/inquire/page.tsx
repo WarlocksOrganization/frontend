@@ -1,7 +1,5 @@
 'use client'
 import 'react-notion-x/src/styles.css'
-import 'prismjs/themes/prism-tomorrow.css'
-import 'katex/dist/katex.min.css'
 import {useEffect, useState} from "react";
 import FetchNoteNotion from "@/features/FetchNote/FetchNoteNotion";
 import {ExtendedRecordMap} from "notion-types";
@@ -24,7 +22,7 @@ const Inquire = () => {
     };
 
     return (
-        <div className={"w-full"}>
+        <div  style={{ paddingTop: "3em" }}  className={"w-full"}>
             <TopNavBar/>
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeHkCg51oIaOxyEPewQR-YBgEct6PO5wPYSTs1mmJbJLQk8QQ/viewform?embedded=true"

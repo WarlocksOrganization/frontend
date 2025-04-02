@@ -22,7 +22,7 @@ const LandingSection = () => {
 }
 
 const LandingSectionWrapper = styled.div`
-  padding-top: 80px;
+  padding-top: 3em;
   word-break: keep-all;
   overflow-wrap: break-word;
   white-space: normal;

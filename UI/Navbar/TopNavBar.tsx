@@ -41,7 +41,7 @@ const FixedNavBar = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: 3em;
   z-index: 999;
 
   display: flex;

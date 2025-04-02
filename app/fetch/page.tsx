@@ -11,7 +11,8 @@ const FetchNoteNotion = dynamic(() => import('@/features/FetchNote/FetchNoteNoti
 
 const FetchNote = () => {
     return (
-        <div className={"w-full"}>
+
+        <div style={{ paddingTop: "3em" }} className={"w-full"}>
             <TopNavBar/>
             <FetchNoteNotion />
         </div>
