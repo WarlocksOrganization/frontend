@@ -18,37 +18,37 @@ const TalkSection = () => {
     const talkList = [
         {
             name: "구본관",
-            talk: "늦어진 게임은 결국 좋은 게임이 되지만, 서둘러 만든 게임은 영원히 나쁜 게임이다.",
+            talk: "너를 믿는 너를 믿어.",
             level: "리더",
             img: "/profile/gu.png"
         },
         {
             name: "김승우",
-            talk: "게임은 사람에게 스스로의 이익에 반하는 행동을 하게 만들 수 있는, 유일하면서도 예측 가능한 힘이다.",
+            talk: "무슨 말을 해도 따옴표로 묶어놓으면 명언처럼 보인다.",
             level: "기획",
             img: "/profile/kim.png"
         },
         {
             name: "김성일",
-            talk: "게임은 코드가 아니다. 게임은 경험이다.",
+            talk: "Keep Going",
             level: "통계",
             img: "/profile/kimsung.png",
         },
         {
             name: "전상혁",
-            talk: "영감을 기다리지 마라. 영감은 일할 때 찾아온다.",
+            talk: "똥을 싸라, 그럼 유명해질 것이다.",
             level: "소켓 서버 개발",
             img: "/profile/chun.png",
         },
         {
             name: "이승록",
-            talk: "재미는 학습의 또 다른 이름일 뿐이다. 네가 하고 싶은 게임을 만들어라.",
+            talk: "시작하고 하다보면 되어있다.",
             level: "미러 서버 개발",
             img: "/profile/lee.png",
         },
         {
             name: "손정찬",
-            talk: "모든 게임엔 이야기가 있다. 단지 일부만 그것을 들려줄 뿐이다.",
+            talk: "나에게 게임이란 그저 오락일 뿐이다.",
             level: "로그 서버",
             img: "/profile/son.png",
         }
