@@ -75,52 +75,74 @@ const GameIntroSection = () => {
     ]
 
     return (
-        <>
-            <SliderContainer id={"intro"}>
-                <Slider {...settings}>
-                    {
-                        sliderDatas.map(
-                            item => {
-                                return (
-                                    <div className="slide flex place-items-center">
-                                        <img src={item.url} alt={item.description}/>
-                                        <span className={"absolute right-1/2 to-50%"}>asldkjf</span>
-                                    </div>
-                                )
-                            }
-                        )
-                    }
-                </Slider>
-                <ButtonContainer>
-                    {
-                        sliderDatas.map( (item, key) =>
-                            <Button
-                                key={item.buttonName}
-                                $isCurrent={currentImg == key}
-                                $color={item.buttonColor}
-                                onClick={() => {slideToIndex(key);
-                                    console.log(key)} }
-                            >
-                                {item.buttonName}
-                            </Button>
-                        )
-                    }
-                </ButtonContainer>
+        <Section id={"intro"}>
+            <h1 style={{textAlign: "center", fontSize: "3em"}}>게임 소개</h1>
+            <ButtonContainer>
+                {
+                    sliderDatas.map( (item, key) =>
+                        <Button
+                            key={item.buttonName}
+                            $isCurrent={currentImg == key}
+                            $color={item.buttonColor}
+                            onClick={() => {slideToIndex(key);
+                                console.log(key)} }
+                        >
+                            {item.buttonName}
+                        </Button>
+                    )
+                }
+            </ButtonContainer>
+            <SliderContainer>
+                <SliderWrapper>
+                    <Slider {...settings}>
+                        {sliderDatas.map(item => (
+                        <div key={item.url} style={{ height: '100%' }}>
+                            <Slide>
+                            <StyledImage src={item.url} alt={item.description} />
+                            </Slide>
+                        </div>
+                        ))}
+                    </Slider>
+                </SliderWrapper>
                 {/*<Description $fade={descriptionFade}> {description}</Description>*/}
             </SliderContainer>
 
 
-        </>
+        </Section>
     )
 }
+
+const Section = styled.section`
+  scroll-margin-top: 80px;
+`
 
 const SliderContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 80%;
+    height: 85vh;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
     overflow: hidden;
+`
+const SliderWrapper = styled.div`
+  height: 75vh;
+  overflow: hidden;
+`
+
+const Slide = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+//   padding: 2vh 0;
+`
+
+const StyledImage = styled.img`
+  max-height: auto;
+  max-width: 70%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 `
 
 const ButtonContainer = styled.div`

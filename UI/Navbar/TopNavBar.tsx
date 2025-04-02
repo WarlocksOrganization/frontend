@@ -6,7 +6,8 @@ import React from "react";
 
 const TopNavBar = () => {
     return (
-        <div className={"flex justify-between m-6"}>
+        // <div className={"flex justify-between m-6"}>
+        <FixedNavBar>
             <LeftNavContainer >
                 <Link href={"/"}>
                     <Image src={"/images/smashUp_logo1.png"} alt={"logo"} width={100} height={50}></Image>
@@ -30,9 +31,37 @@ const TopNavBar = () => {
                     <Link href={"/fetch"}>패치내역</Link>
                 </NavButton>
             </RightNavContainer>
-        </div>
+        </FixedNavBar>
     )
 }
+
+
+const FixedNavBar = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  position: fixed;    // ✅ 절대 유지
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.1);  // 다크용
+    pointer-events: none;
+  }
+`
 
 const NavButton = styled.button`
     font-family: mapleLight,serif ;
