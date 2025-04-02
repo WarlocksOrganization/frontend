@@ -23,23 +23,25 @@ const ClericSection = () => {
         <ClericSectionContainer>
             <ContentSection>
                 <div className={"flex flex-row justify-between"}>
-                    <div className={"flex flex-col place-items-start w-full"}>
+                    <div>
+                        <h2>성직자</h2>
+                        <h3>Cleric</h3>
+                    </div>
+                    <div className={"flex flex-col place-items-end"}>
                         <Title>빛이 머무는 자, 생명을 부여하고 심판을 내리다!</Title>
                         <Desription>신념이 담긴신의 뜻을 전하는 클래릭이 전장에 모습을 드러낸다. <br/>
                             치유의 손길 '생명의 축복'으로 쓰러진 아군을 일으키고 <br/>
                             신성한 분노가 깃든 ‘심판의 빛'으로 적에게 천벌을 내린다. <br/>
                             <strong>— "절망 속에 희망을, 혼돈 속에 질서를! 클래릭과 함께라면, 죽음마저 두렵지 않다!"</strong></Desription>
                     </div>
-                    <div className={"w-1/3 text-right"}>
-                        <h2>성직자</h2>
-                        <h3>Cleric</h3>
-                    </div>
                 </div>
 
                 <div className={"flex flex-row justify-between mt-10 "}>
-
+                    <ModelCanvas>
+                        <ClericModel/>
+                    </ModelCanvas>
                     <SkillBox className={"text-center"}>
-                    <div onClick={() => {setCurrentSkill(0)}}>
+                        <div onClick={() => {setCurrentSkill(0)}}>
                             <img src={skillIcons[0]} alt="HollyAttack_icon"/>
                             <span>성스러운 광휘</span>
                         </div>
@@ -53,9 +55,6 @@ const ClericSection = () => {
                         </div>
                     </SkillBox>
 
-                    <ModelCanvas>
-                        <ClericModel/>
-                    </ModelCanvas>
                 </div>
 
                 <SkillDesc>

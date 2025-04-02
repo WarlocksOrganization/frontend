@@ -28,7 +28,6 @@ const MagicianSection = () => {
         <SectionContainer >
             <ContentSection>
                 <div className={"flex flex-row justify-between"}>
-
                     <div>
                         <h2>마법사</h2>
                         <h3>Mage</h3>
