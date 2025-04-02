@@ -17,6 +17,6 @@ export function NecroModel() {
         object={gltf.scene}
         scale={1.3}
         position={[0, -0.6, 0]}
-        rotation={[Math.PI / 20, 0.3, 0]}
+        rotation={[Math.PI / 40, -0.3, 0]}
     />;
 }

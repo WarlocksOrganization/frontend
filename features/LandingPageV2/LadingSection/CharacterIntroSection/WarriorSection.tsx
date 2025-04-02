@@ -27,6 +27,10 @@ const WarriorSection = () => {
         <SectionContainer >
             <ContentSection>
                 <div className={"flex flex-row justify-between"}>
+                    <div>
+                        <h2>전사</h2>
+                        <h3>Warrior</h3>
+                    </div>
                     <div className={"flex flex-col place-items-start w-full"}>
                         <Title>방심하는 순간, 넌 두 동강이다!</Title>
                         <Desription>쇳덩이보다 단단한 육신과 투지로 무장한 전장의 파괴자, 전사가 돌격한다! <br/>
@@ -34,10 +38,6 @@ const WarriorSection = () => {
                             순식간에 거리를 좁히는 맹렬한 ‘광폭 돌진’, <br/>
                             그리고 모든 공격을 막아내는 철벽의 ‘강화의 비약'까지... <br/>
                             <strong>— “앞길을 막는 자는, 전부 부숴버린다!”</strong></Desription>
-                    </div>
-                    <div className={"w-1/3 text-right"}>
-                        <h2>전사</h2>
-                        <h3>Warrior</h3>
                     </div>
                 </div>
 

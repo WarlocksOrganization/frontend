@@ -32,7 +32,7 @@ const NecroSection = () => {
                         <h2>네크로맨서</h2>
                         <h3>Necromancer</h3>
                     </div>
-                    <div className={"flex flex-col place-items-end"}>
+                    <div className={"flex flex-col place-items-start w-full"}>
                         <Title>죽음을 넘나드는 자, 망자의 군주가 깨어난다.</Title>
                         <Desription>영혼의 소용돌이로 적을 휘감아 끌어당기고, <br/>
                             ‘망령의 돌진’으로 깨어난 혼령이 전장을 질주한다. <br/>
@@ -46,9 +46,6 @@ const NecroSection = () => {
                 </div>
 
                 <div className={"flex flex-row justify-between mt-10 "}>
-                    <ModelCanvas>
-                        <NecroModel/>
-                    </ModelCanvas>
                     <SkillBox className={"text-center"}>
 
                         <div onClick={() => {setCurrentSkill(0)}}>
@@ -64,6 +61,10 @@ const NecroSection = () => {
                             <span>{skillNames[2]}</span>
                         </div>
                     </SkillBox>
+
+                    <ModelCanvas>
+                        <NecroModel/>
+                    </ModelCanvas>
                 </div>
                 <SkillDesc>
                     {

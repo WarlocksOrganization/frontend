@@ -11,8 +11,8 @@ const CharacterIntroSection = () => {
             <ArcherSection />
             <WarriorSection />
             <MagicianSection />
-            <ClericSection />
             <NecroSection />
+            <ClericSection />
         </div>
     )
 }

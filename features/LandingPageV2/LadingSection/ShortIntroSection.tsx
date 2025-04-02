@@ -13,7 +13,7 @@ const ShortIntroSection = () => {
             <TextSection>
                 <Title> Smash Up!</Title>
                 <p> 남녀노소 누구나 쉽고, 재미있게, 다함께 즐길 수 있는 배틀로얄 게임입니다. </p>
-                <Link href={"https://drive.google.com/file/d/1KjTMgWJkwlub28L_Y1JAvOyHsyfs4h4C/view?usp=sharing"} target={"_blank"}> { isHover ?
+                <Link href={"https://drive.google.com/file/d/1K9gUWPtExBQhRgNIXUluqN3jtnJ_aiFF/view?usp=drive_link"} target={"_blank"}> { isHover ?
                     <DownloadLink
                         $isHover={isHover}
                         onMouseEnter={() => setIsHover(true)}
