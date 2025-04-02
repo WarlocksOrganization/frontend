@@ -113,36 +113,45 @@ const GameIntroSection = () => {
 }
 
 const Section = styled.section`
-  scroll-margin-top: 80px;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3em;
+  overflow: hidden;
 `
 
 const SliderContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 85vh;
-    margin: 0 auto;
-    justify-content: space-between;
-    overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+  max-height: 90vh;
+  overflow: hidden;
 `
 const SliderWrapper = styled.div`
-  height: 75vh;
+  aspect-ratio: 3 / 2;
+  flex: 1;
+  max-height: 80vh;
+  margin: 0 auto;
+  padding: 1rem 0;
   overflow: hidden;
 `
 
 const Slide = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-//   padding: 2vh 0;
+  align-items: center;
+  padding: 1rem 0;
+//   padding-bottom: 2vh;
+//   background-color: #00000010; // 확인용
 `
 
 const StyledImage = styled.img`
-  max-height: auto;
-  max-width: 70%;
+  width: 100%;
+  height: auto;
+  max-width: 80%;
+  max-height: 80%;
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
 `
 
 const ButtonContainer = styled.div`
