@@ -26,7 +26,7 @@ const Inquire = () => {
             <TopNavBar/>
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeHkCg51oIaOxyEPewQR-YBgEct6PO5wPYSTs1mmJbJLQk8QQ/viewform?embedded=true"
-                style={{width: "100%", height: "552px"}}>로드 중…
+                style={{width: "100%", height: "100vh"}}>로드 중…
             </iframe>
         </div>
     )
