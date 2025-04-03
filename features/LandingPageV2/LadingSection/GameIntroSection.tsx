@@ -39,28 +39,28 @@ const GameIntroSection = () => {
     const sliderDatas = [
         {
             buttonName:"가벼운 플레이",
-            buttonColor:"#FFD200",
+            buttonColor:"#9D71BD",
             title: "⚔️ 귀여운 비주얼 + 깊이 있는 전략",
             url: "/images/1_main_image.png",
             description: "누구나 쉽게 즐길 수 있는 직관적인 전투! 지금 바로 도전하세요!"
         },
         {
             buttonName: "스킬강화",
-            buttonColor: "#FFBDA3",
+            buttonColor: "#DCAD67",
             title: "🏹 마법 전투! 🔥",
             url: "/images/2_card_image.png",
             description: "최후의 생존자가 되기 위한 치열한 전투!"
         },
         {
             buttonName: "아이템",
-            buttonColor: "#FFB4B9",
+            buttonColor: "deepskyblue",
             title: "💥 6명의 플레이어 전투!",
             url: "/images/3_item_image.png",
             description: "아기자기한 전장에서 펼쳐지는 전략적 대결!"
         },
         {
             buttonName: "전투",
-            buttonColor: "#BEF5BE",
+            buttonColor: "greenyellow",
             title: "🎴 매 라운드 카드 선택",
             url: "/images/4_battle_image.png",
             description: "다양한 카드를 선택해 강화하세요!"
@@ -68,7 +68,7 @@ const GameIntroSection = () => {
         {
             buttonName: "다양한 맵",
             title: "🏰 다양한 직업 & PVP",
-            buttonColor: "#EBAA5F",
+            buttonColor: "yellow",
             url: "/images/5_map_image.png",
             description: "마법사, 전사, 네크로맨서, 궁수 등 전략을 맞춰 전투하세요!"
         }
@@ -169,7 +169,8 @@ const Button = styled.div<{$isCurrent: boolean, $color: string}>`
         ${({$isCurrent}) => {
             if(!$isCurrent) return css`
                 border-radius: 3vh;
-                background-color: darkgrey; 
+                background-color: darkgrey;
+                color: black; 
         `
         }};
     };
@@ -178,6 +179,7 @@ const Button = styled.div<{$isCurrent: boolean, $color: string}>`
         if($isCurrent) return css`
             background-color: ${$color};
             border-radius: 3vh;
+            color: black;
         `
     }};
     

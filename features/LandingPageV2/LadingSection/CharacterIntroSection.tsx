@@ -1,18 +1,7 @@
 import { useState } from "react";
 import {styled } from "styled-components";
-import ArcherSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/ArcherSection";
-import ClericSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/ClericSection";
-import MagicianSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/MagicianSection";
-import NecroSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/NecroSection";
-import WarriorSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/WarriorSection";
-
-const characterComponents = [
-  { id: "archer", label: "궁수", src: "/job/archer.png", color: "greenyellow", component: <ArcherSection /> },
-  { id: "warrior", label: "전사", src: "/job/warrior.png", color: "#DCAD67", component: <WarriorSection /> },
-  { id: "magician", label: "마법사", src: "/job/mage.png", color: "deepskyblue", component: <MagicianSection /> },
-  { id: "necro", label: "네크로맨서", src: "/job/necromancer.png", color: "#9D71BD", component: <NecroSection /> },
-  { id: "cleric", label: "성직자", src: "/job/priest.png", color: "yellow", component: <ClericSection /> },
-];
+import CharacterSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/CharacterSection";
+import { characterConfigs } from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/CharacterConfigs";
 
 const CharacterIntroSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -22,7 +11,7 @@ const CharacterIntroSection = () => {
       <h1 style={{ textAlign: "center", fontSize: "3em" }}>캐릭터 설명</h1>
       <RowWrapper>
         <ButtonContainer>
-            {characterComponents.map((char, idx) => (
+            {characterConfigs.map((char, idx) => (
             <Button
                 key={char.id}
                 $isCurrent={selectedIndex === idx}
@@ -33,7 +22,7 @@ const CharacterIntroSection = () => {
             </Button>
             ))}
         </ButtonContainer>
-        <ContentWrapper>{characterComponents[selectedIndex].component}</ContentWrapper>
+        <ContentWrapper><CharacterSection {...characterConfigs[selectedIndex]} /></ContentWrapper>
       </RowWrapper>
     </Section>
   );
