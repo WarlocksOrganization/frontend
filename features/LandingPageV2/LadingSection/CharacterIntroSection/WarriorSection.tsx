@@ -14,7 +14,7 @@ const WarriorSection = () => {
         "거침없는 돌진으로 적을 쓸어버립니다.",
     ]
     const skillNames = [
-        "참살의 조끼",
+        "참살의 도끼",
         "강화의 비약",
         "광폭 돌진",
     ]
