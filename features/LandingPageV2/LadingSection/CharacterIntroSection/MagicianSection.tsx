@@ -9,7 +9,7 @@ const MagicianSection = () => {
 
     const skillDescs = [
         "타오르는 화염구를 날려 적을 불태웁니다.",
-        "천둥을 불러 한늘의 분로를 적에게 신팜합니다.",
+        "천둥을 불러 하늘의 분노를 적에게 내립니다.",
         "차가운 폭풍이 몰아쳐 적을 얼려버립니다.",
     ]
     const skillNames = [

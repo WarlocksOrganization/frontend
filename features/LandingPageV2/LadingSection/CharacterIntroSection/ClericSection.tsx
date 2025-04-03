@@ -9,7 +9,7 @@ const ClericSection = () => {
 
     const skillDescs = [
         "신성한 구체가 적을 심판합니다.",
-        "신헝한 힘이 방패를 만들어 적의 공력을 막아냅니다.",
+        "신헝한 힘이 방패를 만들어 적의 공격격을 막아냅니다.",
         "거룩한 기운이 범위 안의 모두를 치유합니다.",
     ]
 
@@ -32,7 +32,7 @@ const ClericSection = () => {
                     </div>
                     <div className={"w-1/3 text-right"}>
                         <h2>성직자</h2>
-                        <h3>Cleric</h3>
+                        <h3>Priest</h3>
                     </div>
                 </div>
 
