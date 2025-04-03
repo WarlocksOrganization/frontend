@@ -5,7 +5,6 @@ import {useState} from "react";
 
 const ArcherSection = () => {
     const [currentSkill, setCurrentSkill] = useState(-1);
-    const [isHover, setIsHover] = useState(false)
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     const skillLabels = [
@@ -36,7 +35,7 @@ const ArcherSection = () => {
     ]
 
     return (
-        <ArcherSectionContainer id={"character"}>
+        <SectionContainer id={"character"}>
             <ContentSection>
                 <div className={"flex flex-row justify-between"}>
                     <div>
@@ -103,22 +102,23 @@ const ArcherSection = () => {
                     ))}
                     </SkillBox>
                     <SkillBox>
-                        <SkillItem onMouseEnter={() => {setCurrentSkill(3)}}>
-                            <img src={skillIcons[3]} alt="IceArrow_icon"/>
-                            <span>얼음 송곳</span>
+                        {[3,4,5].map(i => (
+                        <SkillItem
+                            key={i}
+                            onMouseEnter={() => {
+                            setCurrentSkill(i);
+                            setHoveredIndex(i-3);
+                            }}
+                            onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                            <img src={skillIcons[i]} alt={`icon-${i}`} />
+                            <span>{skillLabels[i]}</span>
                         </SkillItem>
-                        <SkillItem onMouseEnter={() => {setCurrentSkill(4)}}>
-                            <img src={skillIcons[4]} alt="PoisonSpore.png"/>
-                            <span>독사의 포효</span>
-                        </SkillItem>
-                        <SkillItem onMouseEnter={() => {setCurrentSkill(5)}}>
-                            <img src={skillIcons[5]} alt="Starfall_icon"/>
-                            <span>유성 사격</span>
-                        </SkillItem>
+                        ))}
                     </SkillBox>
                 </SkillGroupWrapper>
             </ContentSection>
-        </ArcherSectionContainer>
+        </SectionContainer>
     )
 }
 const SkillGroupWrapper = styled.div`
@@ -236,7 +236,7 @@ const Desription = styled.p`
     width: 80%;
 `
 
-const ArcherSectionContainer = styled.div`
+const SectionContainer = styled.div`
     background-color: greenyellow;
     height: 100vh;
     min-height: 500px;
