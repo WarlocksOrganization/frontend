@@ -35,7 +35,7 @@ const ArcherSection = () => {
     ]
 
     return (
-        <SectionContainer id={"character"}>
+        <SectionContainer>
             <ContentSection>
                 <div className={"flex flex-row justify-between"}>
                     <div>
@@ -201,6 +201,7 @@ const SkillItem = styled.div`
     width: clamp(60px, 8vw, 100px);
     height: clamp(60px, 8vw, 100px);
     margin-bottom: 0.2rem;
+    border-radius: 1rem;
   }
 
   span {
@@ -243,8 +244,9 @@ const SectionContainer = styled.div`
     max-height: 100svh;
     display: flex;
     flex-direction: column;
-    padding-top: 3em;
     overflow: hidden;
+    border-radius: 1rem;
+    padding: 0 1em;
 `
 
 const ContentSection = styled.div`
