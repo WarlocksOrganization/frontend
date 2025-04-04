@@ -6,11 +6,13 @@ import DownloadSection from "@/features/LandingPageV2/LadingSection/DownloadSect
 import FlowSection from "@/features/LandingPageV2/LadingSection/FlowSection";
 import TalkSection from "@/features/LandingPageV2/LadingSection/TalkSection";
 import styled from "styled-components";
+import AnnouncementSection from "@/features/LandingPageV2/LadingSection/AnnouncementSection";
 
 const LandingSection = () => {
 
     return (
         <LandingSectionWrapper>
+            <AnnouncementSection/>
             <ShortIntroSection/>
             <GameIntroSection/>
             <CharacterIntroSection/>
