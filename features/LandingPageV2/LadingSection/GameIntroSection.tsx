@@ -22,7 +22,7 @@ const GameIntroSection = () => {
         slidesToShow: 1, // 한 번에 표시할 슬라이드 개수
         slidesToScroll: 1, // 한 번에 넘기는 슬라이드 개수
         autoplay: true, // 자동 재생
-        autoplaySpeed: 3000, // 자동 재생 속도 (3초)
+        autoplaySpeed: 10000, // 자동 재생 속도 (10초)
         arrows: true, // 좌우 화살표 제거 (필요하면 true로 변경 가능)
         afterChange: (currentSlide: number) => {
             setCurrentImg(currentSlide)
@@ -76,7 +76,17 @@ const GameIntroSection = () => {
 
     return (
         <Section id={"intro"}>
-            <h1 style={{textAlign: "center", fontSize: "3em"}}>게임 소개</h1>
+            <h1 style={{
+                textAlign: "center",
+                fontSize: "3em",
+                color: "white",
+                textShadow: `
+                  -2px -2px 0 black,
+                    2px -2px 0 black,
+                  -2px  2px 0 black,
+                    2px  2px 0 black
+                `
+            }}>게임 소개</h1>
             <ButtonContainer>
                 {
                     sliderDatas.map( (item, key) =>
@@ -164,6 +174,7 @@ const Button = styled.div<{$isCurrent: boolean, $color: string}>`
     font-size: 1.3em;
     padding: 1vh 2vh;
     margin: 1vh;
+    cursor: pointer;
     
     &:hover {
         ${({$isCurrent}) => {
@@ -171,6 +182,7 @@ const Button = styled.div<{$isCurrent: boolean, $color: string}>`
                 border-radius: 3vh;
                 background-color: darkgrey;
                 color: black; 
+                text-shadow: none;
         `
         }};
     };
@@ -180,6 +192,15 @@ const Button = styled.div<{$isCurrent: boolean, $color: string}>`
             background-color: ${$color};
             border-radius: 3vh;
             color: black;
+            text-shadow: none;
+        `
+        else return css`
+            background-color: transparent;
+            text-shadow:
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px  1px 0 black,
+                1px  1px 0 black;
         `
     }};
     
