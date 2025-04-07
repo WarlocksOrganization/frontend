@@ -45,8 +45,8 @@ const CharacterSection = ({
                     </div>
                     <div className={"flex flex-col place-items-end"}>
                         <div className="h-20 min-w-[300px] min-h-[100px] grid justify-end items-center overflow-hidden pr-4">
-                                <Title show={currentSkill === -1}>{renderDescription(description)}</Title>
-                                <SkillDesc show={currentSkill > -1}>
+                                <Title $show={currentSkill === -1}>{renderDescription(description)}</Title>
+                                <SkillDesc $show={currentSkill > -1}>
                                 {
                                     currentSkill > -1 &&
                                     <img className = "w-[4.5rem] h-[4.5rem] mb-1 rounded-[50]" src={skillIcons[currentSkill]} alt={`icon-${currentSkill}`} />
@@ -116,7 +116,7 @@ const CharacterSection = ({
     )
 }
 
-const SkillDesc = styled.div<{ show?: boolean }>`
+const SkillDesc = styled.div<{ $show?: boolean }>`
   right: 0;
   font-size: clamp(1.5em, 2.5vw, 2em);
   line-height: 1.5em;
@@ -124,11 +124,11 @@ const SkillDesc = styled.div<{ show?: boolean }>`
   align-items: center;
   gap: 1rem;
   text-overflow: ellipsis;
-  opacity: ${({ show }) => (show ? 1 : 0)};
+  opacity: ${({ $show }) => ($show ? 1 : 0)};
   transition: opacity 0.3s ease;
 `
 
-const Title = styled.p<{ show?: boolean }>`
+const Title = styled.p<{ $show?: boolean }>`
   right: 0;
   //font-weight: bold;
   font-size: clamp(1.5em, 3vw, 2em);
@@ -136,7 +136,7 @@ const Title = styled.p<{ show?: boolean }>`
   text-align: right;
   white-space: nowrap;
   overflow: hidden;
-  opacity: ${({ show }) => (show ? 1 : 0)};
+  opacity: ${({ $show }) => ( $show ? 1 : 0)};
   transition: opacity 0.3s ease;
 `
 const ArrowImage = styled.div.attrs(() => ({}))<{ $isActive?: boolean }>`
