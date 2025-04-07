@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ModelCanvas from "@/model/ModelCanvas";
 import {useState} from "react";
+import {useCurrentCharacter} from "@/stores/currentCharacter";
 
 type CharacterConfigType = {
     id: string;
@@ -26,6 +27,7 @@ const CharacterSection = ({
 
     const [currentSkill, setCurrentSkill] = useState(-1);
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const { currentCharacter } = useCurrentCharacter()
 
     const renderDescription = (text: string) =>
         text.split("\n").map((line, idx) => (
@@ -35,6 +37,8 @@ const CharacterSection = ({
           </span>
         ));
 
+    if(currentCharacter !== id) <div></div>
+    else
     return (
         <div className="h-[80vh] min-h-[500px] max-h-[100svh] flex flex-col overflow-hidden rounded-xl px-4 text-black" style={{ backgroundColor: color }}>
             <div className="w-[95%] m-auto">

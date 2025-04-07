@@ -2,9 +2,11 @@ import { useState } from "react";
 import {styled } from "styled-components";
 import CharacterSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/CharacterSection";
 import { characterConfigs } from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/CharacterConfigs";
+import {useCurrentCharacter} from "@/stores/currentCharacter";
 
 const CharacterIntroSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const {setCurrentCharacter} = useCurrentCharacter()
 
   return (
     <Section id={"character"}>
@@ -16,13 +18,23 @@ const CharacterIntroSection = () => {
                 key={char.id}
                 $isCurrent={selectedIndex === idx}
                 $color={char.color}
-                onClick={() => setSelectedIndex(idx)}
+                onClick={() => {
+                    setSelectedIndex(idx)
+                    setCurrentCharacter(char.id)
+                }}
             >
                 <CharacterIcon src={char.src}></CharacterIcon>
             </Button>
             ))}
         </ButtonContainer>
-        <ContentWrapper><CharacterSection {...characterConfigs[selectedIndex]} /></ContentWrapper>
+        <ContentWrapper>
+            {characterConfigs.map(
+                ((it, key) => <CharacterSection
+                    key = {key}
+                    {...it} />
+                ))
+            }
+        </ContentWrapper>
       </RowWrapper>
     </Section>
   );

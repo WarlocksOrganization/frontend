@@ -25,7 +25,7 @@ export const characterConfigs = [
         "/skill/v2/archer/explosionArrow_icon.png",
         "/skill/v2/archer/IceArrow_icon.png",
         "/skill/v2/archer/PoisonSpore_icon.png",
-        "/skill/v2/archer/StarFall_icon.png",
+        "/skill/v2/archer/Starfall_icon.png",
       ],
       ModelComponent: ArcherModel},
     { id: "Warrior",
