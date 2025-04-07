@@ -29,6 +29,7 @@ const CharacterSection = ({
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const { currentCharacter } = useCurrentCharacter()
 
+    
     const renderDescription = (text: string) =>
         text.split("\n").map((line, idx) => (
           <span key={idx}>
