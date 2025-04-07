@@ -4,17 +4,18 @@ import CharacterSection from "@/features/LandingPageV2/LadingSection/CharacterIn
 import { characterConfigs } from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/CharacterConfigs";
 import {useCurrentCharacter} from "@/stores/currentCharacter";
 
-const CharacterIntroSection = () => {
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const {setCurrentCharacter} = useCurrentCharacter()
-
 type CharacterIntroSectionProps = {
-  selectedIndex: number;
-  setSelectedIndex: (index: number) => void;
+    selectedIndex: number;
+    setSelectedIndex: (index: number) => void;
 };
+
+// const CharacterIntroSection = () => {
+//     const [selectedIndex, setSelectedIndex] = useState(0);
+
 
 const CharacterIntroSection = ({ selectedIndex, setSelectedIndex }: CharacterIntroSectionProps) => {
     // const [selectedIndex, setSelectedIndex] = useState(0);
+    const {setCurrentCharacter} = useCurrentCharacter()
 
   return (
     <Section id={"character"}>

@@ -27,13 +27,20 @@ const LandingSection = () => {
           }}>
             <ShortIntroSection/>
             <div className="text-white" style={{
-            backgroundImage: background ? `url(/background/${background.image})` : undefined,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            transition: "background 0.5s ease-in-out",
-          }}>
-            <GameIntroSection/>
-            <CharacterIntroSection selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
+                // backgroundImage: background ? `url(/background/${background.image})` : undefined,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                opacity: "1",
+            }}>
+                <Background style={{
+                    backgroundImage: background ? `url(/background/${background.image})` : undefined,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    opacity: "1",
+                    transition: "opacity 1s",
+                }}/>
+                <GameIntroSection/>
+                <CharacterIntroSection selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
             </div>
             <TalkSection/>
             <FlowSection />
@@ -41,6 +48,14 @@ const LandingSection = () => {
         </LandingSectionWrapper>
     )
 }
+const Background = styled.div`
+    background: #0a0a0a;
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    
+`
 
 const LandingSectionWrapper = styled.div`
   padding-top: 3em;
