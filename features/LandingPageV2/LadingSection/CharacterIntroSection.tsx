@@ -52,6 +52,8 @@ const Section = styled.section`
 `;
 const RowWrapper = styled.div`
   display: flex;
+    width: 100%;
+    padding: 4vw;
   flex-direction: row;
 `;
 const ContentWrapper = styled.div`
