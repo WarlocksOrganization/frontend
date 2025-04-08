@@ -114,6 +114,7 @@ const Who = styled.div`
 const Talk = styled.div`
     width: 80%;
     font-size: 2.5em;
+    color: black;
 `
 
 const SliderContainer = styled.div`

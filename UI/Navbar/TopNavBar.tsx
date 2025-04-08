@@ -7,7 +7,7 @@ import React from "react";
 const TopNavBar = () => {
     return (
         // <div className={"flex justify-between m-6"}>
-        <FixedNavBar>
+        <FixedNavBar className={"text-black"}>
             <LeftNavContainer >
                 <Link href={"/"}>
                     <Image src={"/images/smashUp_logo1.png"} alt={"logo"} width={100} height={50}></Image>

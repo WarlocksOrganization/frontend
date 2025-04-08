@@ -1,16 +1,35 @@
 import { useState } from "react";
-import {styled } from "styled-components";
+import { styled } from "styled-components";
 import CharacterSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/CharacterSection";
 import { characterConfigs } from "@/features/LandingPageV2/LadingSection/CharacterIntroSection/CharacterConfigs";
 import {useCurrentCharacter} from "@/stores/currentCharacter";
 
-const CharacterIntroSection = () => {
-    const [selectedIndex, setSelectedIndex] = useState(0);
+type CharacterIntroSectionProps = {
+    selectedIndex: number;
+    setSelectedIndex: (index: number) => void;
+};
+
+// const CharacterIntroSection = () => {
+//     const [selectedIndex, setSelectedIndex] = useState(0);
+
+
+const CharacterIntroSection = ({ selectedIndex, setSelectedIndex }: CharacterIntroSectionProps) => {
+    // const [selectedIndex, setSelectedIndex] = useState(0);
     const {setCurrentCharacter} = useCurrentCharacter()
 
   return (
     <Section id={"character"}>
-      <h1 style={{ textAlign: "center", fontSize: "3em" }}>캐릭터 설명</h1>
+      <h1 style={{
+        textAlign: "center",
+        fontSize: "3em",
+        color: "white",
+        textShadow: `
+          -2px -2px 0 black,
+            2px -2px 0 black,
+          -2px  2px 0 black,
+            2px  2px 0 black
+        `
+      }}>캐릭터 설명</h1>
       <RowWrapper>
         <ButtonContainer>
             {characterConfigs.map((char, idx) => (
@@ -87,8 +106,14 @@ const Button = styled.div<{ $isCurrent: boolean; $color: string }>`
 
   ${({ $isCurrent, $color }) =>
     $isCurrent
-      ? `background-color: ${$color};`
-      : `background-color: transparent;`}
+      ? `background-color: ${$color};
+        text-shadow: none;`
+      : `background-color: transparent;
+        text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px  1px 0 black,
+            1px  1px 0 black;`}
 
   &:hover {
     ${({ $isCurrent }) =>
