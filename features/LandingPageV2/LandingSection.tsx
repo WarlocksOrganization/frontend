@@ -6,8 +6,7 @@ import DownloadSection from "@/features/LandingPageV2/LadingSection/DownloadSect
 import FlowSection from "@/features/LandingPageV2/LadingSection/FlowSection";
 import TalkSection from "@/features/LandingPageV2/LadingSection/TalkSection";
 import styled from "styled-components";
-import { useEffect, useState } from "react";
-import { color } from "three/tsl";
+import { useState } from "react";
 
 const LandingSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -23,7 +22,6 @@ const LandingSection = () => {
     return (
         <LandingSectionWrapper style={{
             backgroundColor: background?.color,
-            transition: "background 0.5s ease-in-out"
           }}>
             <ShortIntroSection/>
             <div className="text-white" style={{
@@ -31,16 +29,43 @@ const LandingSection = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 opacity: "1",
+                position: "relative"
             }}>
+
                 <Background style={{
                     backgroundImage: background ? `url(/background/${background.image})` : undefined,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    opacity: "1",
-                    transition: "opacity 1s",
+                    opacity: selectedIndex === 0 ? 1 : 0,
+                    zIndex: 1,
+                    transition: "opacity 0.3s ease-in-out",
                 }}/>
-                <GameIntroSection/>
-                <CharacterIntroSection selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
+                <Background style={{
+                    backgroundImage: background ? `url(/background/${background.image})` : undefined,
+                    opacity: selectedIndex === 1 ? 1 : 0,
+                    zIndex: 1,
+                    transition: "opacity 0.3s",
+                }}/>
+                <Background style={{
+                    backgroundImage: background ? `url(/background/${background.image})` : undefined,
+                    opacity: selectedIndex === 2 ? 1 : 0,
+                    zIndex: 1,
+                    transition: "opacity 0.3s",
+                }}/>
+                <Background style={{
+                    backgroundImage: background ? `url(/background/${background.image})` : undefined,
+                    opacity: selectedIndex === 3 ? 1 : 0,
+                    zIndex: 1,
+                    transition: "opacity 0.3s",
+                }}/>
+                <Background style={{
+                    backgroundImage: background ? `url(/background/${background.image})` : undefined,
+                    opacity: selectedIndex === 4 ? 1 : 0,
+                    zIndex: 1,
+                    transition: "opacity 0.3s",
+                }}/>
+                <div style={{position: "relative", zIndex: "2"}}>
+                    <GameIntroSection/>
+                    <CharacterIntroSection selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
+                </div>
             </div>
             <TalkSection/>
             <FlowSection />
@@ -49,12 +74,10 @@ const LandingSection = () => {
     )
 }
 const Background = styled.div`
-    background: #0a0a0a;
     position: absolute;
     background-size: cover;
     width: 100%;
     height: 100%;
-    
 `
 
 const LandingSectionWrapper = styled.div`

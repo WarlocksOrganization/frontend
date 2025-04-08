@@ -22,7 +22,7 @@ const Inquire = () => {
     };
 
     return (
-        <div  style={{ paddingTop: "3em" }}  className={"w-full"}>
+        <div  style={{ paddingTop: "3em" }}  className={"w-full bg-gray-50"}>
             <TopNavBar/>
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeHkCg51oIaOxyEPewQR-YBgEct6PO5wPYSTs1mmJbJLQk8QQ/viewform?embedded=true"
