@@ -36,7 +36,7 @@ const LandingSection = () => {
                     backgroundImage: background ? `url(/background/${background.image})` : undefined,
                     opacity: selectedIndex === 0 ? 1 : 0,
                     zIndex: 1,
-                    transition: "opacity 0.3s ease-in-out",
+                    transition: "opacity 0.3s",
                 }}/>
                 <Background style={{
                     backgroundImage: background ? `url(/background/${background.image})` : undefined,
