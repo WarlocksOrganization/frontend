@@ -1,5 +1,6 @@
 'use client'
 import ShortIntroSection from "@/features/LandingPageV2/LadingSection/ShortIntroSection";
+import UpdateSection from "@/features/LandingPageV2/LadingSection/UpdateSection";
 import GameIntroSection from "@/features/LandingPageV2/LadingSection/GameIntroSection";
 import CharacterIntroSection from "@/features/LandingPageV2/LadingSection/CharacterIntroSection";
 import DownloadSection from "@/features/LandingPageV2/LadingSection/DownloadSection";
@@ -63,6 +64,7 @@ const LandingSection = () => {
                     transition: "opacity 0.3s",
                 }}/>
                 <div style={{position: "relative", zIndex: "2"}}>
+                    <UpdateSection/>
                     <GameIntroSection/>
                     <CharacterIntroSection selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
                 </div>
