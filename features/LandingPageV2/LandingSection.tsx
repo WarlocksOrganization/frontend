@@ -13,11 +13,11 @@ const LandingSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const backgroundStyles = {
-        0: { color: "greenyellow", image: "Mage_0.png" },
+        0: { color: "#E2F0CB", image: "Mage_0.png" },
         1: { color: "#DCAD67", image: "Warrior_0.png" },
-        2: { color: "deepskyblue", image: "Archer_0.png" },
-        3: { color: "#9D71BD", image: "Necro_0.png" },
-        4: { color: "yellow", image: "Priest_0.png" },
+        2: { color: "#AEDFF7", image: "Archer_0.png" },
+        3: { color: "#D7C7E3", image: "Necro_0.png" },
+        4: { color: "#FAF3B0", image: "Priest_0.png" },
     };
     const background = backgroundStyles[selectedIndex as 0 | 1 | 2 | 3 | 4];
     return (

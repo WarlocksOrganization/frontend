@@ -8,7 +8,7 @@ export const characterConfigs = [
     { id: "Archer",
       label: "궁수",
       src: "/job/archer.png",
-      color: "greenyellow",
+      color: "#E2F0CB",
       description: "보고 피하기에는 이미 늦었다!\n강력한 화살이 순식간에 숨통을 끊는다!",
       skillLabels: ["신궁의 화살","맹독 화살","폭렬 화살","얼음 송곳","독사의 포효","유성 사격"],
       skillDescs: [
@@ -61,7 +61,7 @@ export const characterConfigs = [
       { id: "Mage",
         label: "마법사",
         src: "/job/mage.png",
-        color: "deepskyblue",
+        color: "#AEDFF7",
         description: "이 세계의 법칙은 내가 다시 쓴다!\n변수를 창조하는 마법의 전문가!",
         skillLabels: [
           "화염구",
@@ -91,7 +91,7 @@ export const characterConfigs = [
       { id: "Necromancer",
         label: "네크로맨서",
         src: "/job/necromancer.png",
-        color: "#9D71BD",
+        color: "#D7C7E3",
         description: "산 자는 두려워하고 죽은 자는 따른다!\n전장을 장악하는 망자의 군주",
         skillLabels: [
           "망령의 급습",
@@ -121,7 +121,7 @@ export const characterConfigs = [
         { id: "Cleric",
           label: "성직자",
           src: "/job/priest.png",
-          color: "yellow",
+          color: "#FAF3B0",
           description: "빛이 머무는 자, 생명을 부여하고 심판을 내리다!\n하늘의 뜻을 전하는 신의 사도",
           skillLabels: [
             "성스러운 광휘",

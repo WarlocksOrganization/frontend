@@ -257,7 +257,7 @@ const Desription = styled.p`
 `
 
 const SectionContainer = styled.div`
-    background-color: yellow;
+    background-color: #FAF3B0;
     height: 100vh;
     min-height: 500px;
     max-height: 100svh;
