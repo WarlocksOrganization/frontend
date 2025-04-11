@@ -3,22 +3,16 @@ import React, {useRef, useState} from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled, {css} from "styled-components";
+import Link from "next/link";
 
 const UpdateSection = () => {
 
     return (
         <Section id={"intro"}>
             <Title>신규 업데이트</Title>
-            <StyledImage src={"/images/update111.png"} alt={"update_ver1.11"}/>
-            {/* <SliderContainer>
-                <SliderWrapper>
-                    <Slider>
-                            <Slide>
-                            
-                            </Slide>
-                    </Slider>
-                </SliderWrapper>
-            </SliderContainer> */}
+            <Link href={"/fetch"} className={"flex justify-center"} style={{width: "80%", height: "80%"}}>
+                <StyledImage src={"/images/update111.png"} alt={"update_ver1.11"}/>
+            </Link>
         </Section>
     )
 }
@@ -49,8 +43,7 @@ const Title = styled.h1`
 const StyledImage = styled.img`
   width: 100%;
   height: auto;
-  max-width: 80%;
-  max-height: 80%;
+  max-height: 100%;
   object-fit: contain;
   border-radius: 2rem;
 `
