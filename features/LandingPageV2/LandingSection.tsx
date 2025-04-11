@@ -8,6 +8,7 @@ import FlowSection from "@/features/LandingPageV2/LadingSection/FlowSection";
 import TalkSection from "@/features/LandingPageV2/LadingSection/TalkSection";
 import styled from "styled-components";
 import { useState } from "react";
+import AnnouncementSection from "@/features/LandingPageV2/LadingSection/AnnouncementSection";
 
 const LandingSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -24,6 +25,7 @@ const LandingSection = () => {
         <LandingSectionWrapper style={{
             backgroundColor: background?.color,
           }}>
+            <AnnouncementSection/>
             <ShortIntroSection/>
             <div className="text-white" style={{
                 // backgroundImage: background ? `url(/background/${background.image})` : undefined,
