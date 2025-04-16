@@ -11,7 +11,7 @@ const UpdateSection = () => {
         <Section id={"intro"}>
             <Title>신규 업데이트</Title>
             <Link href={"/fetch"} className={"flex justify-center"} style={{width: "80%", height: "80%"}}>
-                <StyledImage src={"/images/update111.png"} alt={"update_ver1.11"}/>
+                <StyledImage src={"/images/update130.png"} alt={"update_ver1.11"}/>
             </Link>
         </Section>
     )
